@@ -2,6 +2,7 @@
 title: altair
 description: 
 slug: "altair"
+date: 2026-02-01
 weight: 1
 categories: "library"
 address: 

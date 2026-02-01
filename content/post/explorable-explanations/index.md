@@ -2,6 +2,7 @@
 title: explorable-explanations
 description: 
 slug: "explorable-explanations"
+date: 2026-02-01
 weight: 1
 categories: "contents"
 address: 

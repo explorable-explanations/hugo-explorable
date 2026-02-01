@@ -2,6 +2,7 @@
 title: post--misread-tsne
 description: 
 slug: "post--misread-tsne"
+date: 2026-02-01
 weight: 1
 categories: "contents"
 address: 

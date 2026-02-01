@@ -2,6 +2,7 @@
 title: cnn-explainer
 description: 
 slug: "cnn-explainer"
+date: 2026-02-01
 weight: 1
 categories: "ai-model"
 address: 

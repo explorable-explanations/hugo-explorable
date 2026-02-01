@@ -2,6 +2,7 @@
 title: ganlab
 description: 
 slug: "ganlab"
+date: 2026-02-01
 weight: 1
 categories: "ai-model"
 address: 

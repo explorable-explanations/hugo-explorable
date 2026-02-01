@@ -2,6 +2,7 @@
 title: playground
 description: 
 slug: "playground"
+date: 2026-02-01
 weight: 1
 categories: "ai-model"
 address: 

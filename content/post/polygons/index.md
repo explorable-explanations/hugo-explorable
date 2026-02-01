@@ -2,6 +2,7 @@
 title: polygons
 description: 
 slug: "polygons"
+date: 2026-02-01
 weight: 1
 categories: "contents"
 address: 

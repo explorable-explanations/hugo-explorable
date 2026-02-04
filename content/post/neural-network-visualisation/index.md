@@ -10,7 +10,7 @@ image: "images/cover.png"
 ---
 
 {{< external-link-card
-    url=""
+    url="https://nn-playground.explorable-explanations.com/"
     title="neural-network-visualisation"
     image="images/cover.png"
     site="explorable-explanations.com"

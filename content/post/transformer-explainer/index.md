@@ -10,7 +10,7 @@ image: "images/cover.png"
 ---
 
 {{< external-link-card
-    url=""
+    url="https://transformer-explainer.explorable-explanations.com/"
     title="ai-explorables"
     image="images/cover.png"
     site="explorable-explanations.com"

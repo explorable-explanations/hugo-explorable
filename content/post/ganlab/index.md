@@ -10,7 +10,7 @@ image: "images/cover.png"
 ---
 
 {{< external-link-card
-    url=""
+    url="https://ganlab.explorable-explanations.com/"
     title="ganlab"
     image="images/cover.png"
     site="explorable-explanations.com"

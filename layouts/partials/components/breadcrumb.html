@@ -1,0 +1,16 @@
+<nav class="breadcrumb-container" aria-label="breadcrumb">
+    <ol class="breadcrumb"
+        style="display: flex; flex-wrap: wrap; list-style: none; padding: 0; margin-bottom: 1rem; gap: 0.5rem; font-size: 0.85rem; color: var(--card-text-color-secondary);">
+        <li>
+            <a href="{{ .Site.BaseURL }}" style="color: inherit; text-decoration: none;">Home</a>
+        </li>
+        {{ range .Ancestors.Reverse }}
+        <li>/</li>
+        <li>
+            <a href="{{ .Permalink }}" style="color: inherit; text-decoration: none;">{{ .Title }}</a>
+        </li>
+        {{ end }}
+        <li>/</li>
+        <li aria-current="page">{{ .Title }}</li>
+    </ol>
+</nav>

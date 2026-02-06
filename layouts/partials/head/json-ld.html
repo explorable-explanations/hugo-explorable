@@ -1,0 +1,66 @@
+{{ if .IsPage }}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": {{ .Title }},
+    "image": [
+        {{ if .Params.image }}
+        {{ .Params.image | absURL }}
+        {{ else }}
+        {{ .Site.Params.defaultImage.opengraph.src | absURL }}
+        {{ end }}
+    ],
+    "datePublished": {{ .Date.Format "2006-01-02T15:04:05Z07:00" }},
+    "dateModified": {{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }},
+    "author": {
+        "@type": "Person",
+        "name": {{ or .Params.author .Site.Params.sidebar.author.name }}
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": {{ .Site.Title }},
+        "logo": {
+            "@type": "ImageObject",
+            "url": {{ .Site.Params.sidebar.avatar.src | absURL }}
+        }
+    },
+    "description": {{ .Summary | plainify | truncate 160 }}
+}
+</script>
+{{ end }}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": {{ .Site.BaseURL }}
+    }
+    {{ if .IsPage }}
+    {{ $position := 2 }}
+    {{ if .Parent }}
+        ,
+        {
+          "@type": "ListItem",
+          "position": {{ $position }},
+          "name": {{ .Parent.Title }},
+          "item": {{ .Parent.Permalink }}
+        }
+        {{ $position = add $position 1 }}
+    {{ end }}
+    ,
+    {
+      "@type": "ListItem",
+      "position": {{ $position }},
+      "name": {{ .Title }},
+      "item": {{ .Permalink }}
+    }
+    {{ end }}
+  ]
+}
+</script>

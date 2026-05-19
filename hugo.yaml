@@ -231,6 +231,11 @@ menu:
           weight: 20
           params:
               icon: archives
+        - name: 可視化の原理
+          pageRef: /categories/data-viz
+          weight: 25
+          params:
+              icon: hash
         - name: コンテンツ
           pageRef: /categories/contents
           weight: 30

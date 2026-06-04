@@ -14,10 +14,10 @@ Diffusion Explainerは、Stable Diffusionがテキストプロンプトから画
 プロンプトを切り替えながら、テキスト表現や画像表現がどのように生成結果につながるかを観察できる構成です。拡散モデルや画像生成AIの仕組みを、数式や実装の詳細に入る前に直感的に把握するための教材として使いやすいツールです。
 
 {{< external-link-card
-    url="https://poloclub.github.io/diffusion-explainer/"
+    url="https://diffusion-explainer.explorable-explanations.com/"
     title="Diffusion Explainer"
     image="images/cover.png"
-    site="poloclub.github.io"
+    site="diffusion-explainer.explorable-explanations.com"
     description="Stable Diffusionの画像生成プロセスを、テキスト表現・ノイズ除去・アップスケールに分けて可視化するツール。"
 >}}
 {{< /external-link-card >}}

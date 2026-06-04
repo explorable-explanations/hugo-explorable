@@ -77,7 +77,7 @@ params:
         emoji: 📊
         subtitle: 
         avatar:
-            enabled: true
+            enabled: false
             local: true
             src: img/avatar.png
         author:
@@ -235,7 +235,7 @@ menu:
           pageRef: /categories/data-viz
           weight: 25
           params:
-              icon: hash
+              icon: chart
         - name: コンテンツ
           pageRef: /categories/contents
           weight: 30

@@ -2,7 +2,7 @@
     <ol class="breadcrumb"
         style="display: flex; flex-wrap: wrap; list-style: none; padding: 0; margin-bottom: 1rem; gap: 0.5rem; font-size: 0.85rem; color: var(--card-text-color-secondary);">
         <li>
-            <a href="{{ .Site.BaseURL }}" style="color: inherit; text-decoration: none;">Home</a>
+            <a href="{{ .Site.Home.Permalink }}" style="color: inherit; text-decoration: none;">{{ if eq .Language.Lang "ja" }}ホーム{{ else }}Home{{ end }}</a>
         </li>
         {{ range .Ancestors.Reverse }}
         <li>/</li>

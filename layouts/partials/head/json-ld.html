@@ -38,8 +38,8 @@
     {
       "@type": "ListItem",
       "position": 1,
-      "name": "Home",
-      "item": {{ .Site.BaseURL }}
+      "name": {{ if eq .Language.Lang "ja" }}"ホーム"{{ else }}"Home"{{ end }},
+      "item": {{ .Site.Home.Permalink }}
     }
     {{ if .IsPage }}
     {{ $position := 2 }}

@@ -130,43 +130,54 @@
 
 <div class="lp-container">
     <!-- Hero -->
+    {{ $isEn := eq .Language.Lang "en" }}
     <section class="hero">
         <div class="hero-content">
-            <h1 class="hero-title">Explorable Explanations</h1>
-            <p class="hero-subtitle">インタラクティブな記事で学ぶ<br>AIとデータ可視化の世界</p>
+            <h1 class="hero-title">{{ default "Explorable Explanations" .Params.hero.headline }}</h1>
+            <p class="hero-subtitle">
+                {{ with .Params.hero.body }}
+                    {{ range $index, $line := . }}{{ if $index }}<br>{{ end }}{{ $line }}{{ end }}
+                {{ else }}
+                    {{ if $isEn }}
+                        Learn AI and data visualization through interactive articles
+                    {{ else }}
+                        インタラクティブな記事で学ぶ<br>AIとデータ可視化の世界
+                    {{ end }}
+                {{ end }}
+            </p>
             <div class="hero-buttons">
             </div>
         </div>
         <div class="hero-image">
             <!-- Placeholder for the illustration -->
-            <img src="/images/cover-top.png" alt="Hero Image" style="width: 100%; height: auto; border-radius: 20px;">
+            <img src="{{ default "/images/cover-top.png" .Params.hero.image }}" alt="{{ .Title }}" style="width: 100%; height: auto; border-radius: 20px;">
         </div>
     </section>
 
     <!-- Features -->
     <section class="features">
-        <a href="/categories/ai-model" class="feature-card" style="text-decoration: none; color: inherit;">
+        <a href="{{ "/categories/ai-model/" | relLangURL }}" class="feature-card" style="text-decoration: none; color: inherit;">
             <div class="feature-icon">🤖</div>
-            <h3 class="feature-title">AIモデル</h3>
-            <p class="feature-desc">最新のAIモデルの仕組みや特徴について、インタラクティブに学べる解説記事です。</p>
+            <h3 class="feature-title">{{ if $isEn }}AI Models{{ else }}AIモデル{{ end }}</h3>
+            <p class="feature-desc">{{ if $isEn }}Interactive articles for learning how modern AI models work.{{ else }}最新のAIモデルの仕組みや特徴について、インタラクティブに学べる解説記事です。{{ end }}</p>
         </a>
 
-        <a href="/categories/library" class="feature-card" style="text-decoration: none; color: inherit;">
+        <a href="{{ "/categories/library/" | relLangURL }}" class="feature-card" style="text-decoration: none; color: inherit;">
             <div class="feature-icon">📚</div>
-            <h3 class="feature-title">ライブラリ</h3>
-            <p class="feature-desc">データ可視化や機械学習に役立つライブラリの使い方や実践例を紹介します。</p>
+            <h3 class="feature-title">{{ if $isEn }}Libraries{{ else }}ライブラリ{{ end }}</h3>
+            <p class="feature-desc">{{ if $isEn }}Guides and practical examples for libraries used in data visualization and machine learning.{{ else }}データ可視化や機械学習に役立つライブラリの使い方や実践例を紹介します。{{ end }}</p>
         </a>
 
-        <a href="/categories/data-viz" class="feature-card" style="text-decoration: none; color: inherit;">
+        <a href="{{ "/categories/data-viz/" | relLangURL }}" class="feature-card" style="text-decoration: none; color: inherit;">
             <div class="feature-icon">📐</div>
-            <h3 class="feature-title">可視化の原理</h3>
-            <p class="feature-desc">分類手法や地図表現など、データ可視化の考え方を理解するためのコンテンツを集めています。</p>
+            <h3 class="feature-title">{{ if $isEn }}Visualization Principles{{ else }}可視化の原理{{ end }}</h3>
+            <p class="feature-desc">{{ if $isEn }}Content for understanding classification, map representation, and other principles of data visualization.{{ else }}分類手法や地図表現など、データ可視化の考え方を理解するためのコンテンツを集めています。{{ end }}</p>
         </a>
 
-        <a href="/categories/contents" class="feature-card" style="text-decoration: none; color: inherit;">
+        <a href="{{ "/categories/contents/" | relLangURL }}" class="feature-card" style="text-decoration: none; color: inherit;">
             <div class="feature-icon">📝</div>
-            <h3 class="feature-title">コンテンツ</h3>
-            <p class="feature-desc">その他、データサイエンスやプログラミングに関する様々なコンテンツを提供しています。</p>
+            <h3 class="feature-title">{{ if $isEn }}Contents{{ else }}コンテンツ{{ end }}</h3>
+            <p class="feature-desc">{{ if $isEn }}Additional content about data science, programming, and interactive learning.{{ else }}その他、データサイエンスやプログラミングに関する様々なコンテンツを提供しています。{{ end }}</p>
         </a>
     </section>
 

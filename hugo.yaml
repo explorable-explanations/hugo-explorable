@@ -33,15 +33,75 @@ languages:
         title: Explorable Explanations
         weight: 1
         params:
+            dateFormat:
+                published: 2006年1月2日
+                lastUpdated: 2006年1月2日 15:04 MST
             sidebar:
                 subtitle: インタラクティブな記事で学ぶAIとデータ可視化
+        menus:
+            main:
+                - name: ホーム
+                  pageRef: /
+                  weight: -60
+                  params:
+                      icon: home
+                - name: AIモデル
+                  pageRef: /categories/ai-model
+                  weight: 10
+                  params:
+                      icon: infinity
+                - name: ライブラリ
+                  pageRef: /categories/library
+                  weight: 20
+                  params:
+                      icon: archives
+                - name: 可視化の原理
+                  pageRef: /categories/data-viz
+                  weight: 25
+                  params:
+                      icon: chart
+                - name: コンテンツ
+                  pageRef: /categories/contents
+                  weight: 30
+                  params:
+                      icon: categories
     en:
         languageName: English
         title: Explorable Explanations
         weight: 2
         params:
+            dateFormat:
+                published: Jan 2, 2006
+                lastUpdated: Jan 2, 2006 15:04 MST
             sidebar:
-                subtitle: The only authentic data visualization course in Japan.
+                subtitle: Learn AI and data visualization through interactive articles
+        menus:
+            main:
+                - name: Home
+                  pageRef: /
+                  weight: -60
+                  params:
+                      icon: home
+                - name: AI Models
+                  pageRef: /categories/ai-model
+                  weight: 10
+                  params:
+                      icon: infinity
+                - name: Libraries
+                  pageRef: /categories/library
+                  weight: 20
+                  params:
+                      icon: archives
+                - name: Visualization Principles
+                  pageRef: /categories/data-viz
+                  weight: 25
+                  params:
+                      icon: chart
+                - name: Contents
+                  pageRef: /categories/contents
+                  weight: 30
+                  params:
+                      icon: categories
 
 services:
     # Change it to your Disqus shortname before using
@@ -210,38 +270,6 @@ params:
             enabled: true
         content:
             enabled: true
-
-### Custom menu
-### See https://stack.jimmycai.com/config/menu
-### To remove about, archive and search page menu item, remove `menu` field from their FrontMatter
-menu:
-    main:
-        - name: ホーム
-          pageRef: /
-          weight: -60
-          params:
-              icon: home
-        - name: AIモデル
-          pageRef: /categories/ai-model
-          weight: 10
-          params:
-              icon: infinity
-        - name: ライブラリ
-          pageRef: /categories/library
-          weight: 20
-          params:
-              icon: archives
-        - name: 可視化の原理
-          pageRef: /categories/data-viz
-          weight: 25
-          params:
-              icon: chart
-        - name: コンテンツ
-          pageRef: /categories/contents
-          weight: 30
-          params:
-              icon: categories
-
 
 related:
     includeNewer: true

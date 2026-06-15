@@ -6,7 +6,7 @@ baseurl: https://explorable-explanations.com/
 languageCode: ja-jp
 theme: hugo-theme-stack
 title: Explorable Explanations
-copyright: Example Person
+copyright: maintained by Yuichi Yazaki
 
 ignoreFiles:
     - "/node_modules/"

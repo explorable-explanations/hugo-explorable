@@ -250,13 +250,13 @@ params:
             site: visualizing_jp
 
             # Available values: summary, summary_large_image
-            card: summary
+            card: summary_large_image
 
     defaultImage:
         opengraph:
             enabled: true
             local: false
-            src: img/avatar.png
+            src: images/og-cover.jpg
 
     colorScheme:
         # Display toggle

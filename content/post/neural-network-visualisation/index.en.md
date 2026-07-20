@@ -14,10 +14,10 @@ MNIST MLP Inference Visualization is an interactive tool for observing the infer
 Neuron activations, strong weighted connections, prediction distributions, and the training timeline are shown in the same view, making the internal representation of a neural network easier to understand visually. It is useful for learning image classification inference beyond just the input and output.
 
 {{< external-link-card
-    url="https://nn-playground.explorable-explanations.com/"
+    url="https://nn-vis.noelith.dev/"
     title="MNIST MLP Inference Visualization"
     image="images/cover.png"
-    site="nn-playground.explorable-explanations.com"
+    site="nn-vis.noelith.dev"
     description="Draw handwritten digits and observe MLP activations and prediction probabilities in 3D."
 >}}
 {{< /external-link-card >}}

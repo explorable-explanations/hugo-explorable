@@ -4,4 +4,6 @@
     We removed the manual SCSS loading that was causing build errors.
     Custom CSS is automatically loaded by the theme via assets/scss/custom.scss.
 -->
-{{ partial "head/json-ld.html" . }}
+{{- if and (eq .Kind "page") (not .Date.IsZero) -}}
+  {{ partial "schema-article.html" . }}
+{{- end -}}

@@ -121,6 +121,10 @@ permalinks:
 params:
     mainSections:
         - post
+    author:
+        orcid: https://orcid.org/0009-0005-2429-3279
+        name: 矢崎裕一
+        profileURL: https://visualizing.jp/profile/
     featuredImageField: image
     rssFullContent: true
     favicon: # e.g.: favicon placed in `static/favicon.ico` of your site folder, then set this field to `/favicon.ico` (`/` is necessary)
